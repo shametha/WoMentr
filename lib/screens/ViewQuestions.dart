@@ -1,7 +1,6 @@
 import 'package:womentr/SizeConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:womentr/screens/SpecificQuestion.dart';
-//import 'package:womentr/screens/SpecificQuestion.dart';
 import '../../AppTheme.dart';
 
 class CategoryQuestion extends StatefulWidget {
@@ -23,53 +22,67 @@ class _CategoryQuestionState extends State<CategoryQuestion> {
         debugShowCheckedModeBanner: false,
         home: SafeArea(
           child: Scaffold(
-              body: ListView(
-            padding: EdgeInsets.all(24),
-            children: <Widget>[
-              Container(
-                child: Text(
-                  "Hey Shifu,",
-                  style: AppTheme.getTextStyle(themeData.textTheme.subtitle2,
-                      color: themeData.colorScheme.primaryVariant,
-                      fontWeight: 600,
-                      xMuted: true),
+              body: Stack(
+                children: [
+                  ClipPath(
+                    clipper: _MyCustomClipper(context),
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: themeData.colorScheme.background.withOpacity(0.5),
+                    )),
+                  ListView(
+                          padding: EdgeInsets.all(24),
+                          children: <Widget>[
+                Container(
+                  child: Text(
+                    "Hey Shifu,",
+                    style: AppTheme.getTextStyle(themeData.textTheme.subtitle2,
+                        color: themeData.colorScheme.primaryVariant,
+                        fontWeight: 600,
+                        xMuted: true),
+                  ),
                 ),
-              ),
-              Container(
-                child: Text(
-                  widget.categoryInput,
-                  style: AppTheme.getTextStyle(themeData.textTheme.headline4,
-                      color: themeData.colorScheme.primaryVariant,
-                      fontWeight: 600),
+                Container(
+                  child: Text(
+                    widget.categoryInput,
+                    style: AppTheme.getTextStyle(themeData.textTheme.headline4,
+                        color: themeData.colorScheme.primaryVariant,
+                        fontWeight: 600),
+                  ),
                 ),
-              ),
-              _singleNews(
-                author: "Panda",
-                date: "Jan 10, 2021",
-                headline: "I feel discriminated in my Tech Club.",
-              ),
-              _singleNews(
-                author: "Pooja",
-                date: "Dec 23, 2020",
-                headline: "Stalker on Instagram is blackMailing me!",
-              ),
-              _singleNews(
-                author: "Jennifer",
-                date: "Nov 6, 2020",
-                headline: "My parents aren't allow be to choose my career",
-              ),
-              _singleNews(
-                author: "Puppy",
-                date: "March 12, 2020",
-                headline: "I am denied the right to education.",
-              ),
-              _singleNews(
-                author: "Honey",
-                date: "April 31, 2020",
-                headline: "My teacher is harassing me!",
-              ),
-            ],
-          )),
+                _singleNews(
+                  author: "Panda",
+                  date: "Aug 15, 2021",
+                  headline: "I feel discriminated in my Tech Club.",
+                ),
+                _singleNews(
+                  author: "Pooja",
+                  date: "Aug 15, 2021",
+                  headline: "Stalker on Instagram is blackMailing me!",
+                ),
+                _singleNews(
+                  author: "Jennifer",
+                  date: "Nov 6, 2021",
+                  headline: "My parents aren't allowing me to choose my career",
+                ),
+                _singleNews(
+                  author: "Puppy",
+                  date: "Mar 12, 2021",
+                  headline: "I am denied the right to education.",
+                ),
+                _singleNews(
+                  author: "Honey",
+                  date: "Apr 31, 2021",
+                  headline: "My teacher is harassing me!",
+                ),
+                _singleNews(
+                  author: "Monica",
+                  date: "Aug 15, 2021",
+                  headline: "I strongly doubt my instagram is hacked.",
+                ),
+                          ],
+                        ),
+                ])),
         ));
   }
 
@@ -147,5 +160,27 @@ class _CategoryQuestionState extends State<CategoryQuestion> {
         ),
       ),
     );
+  }
+}
+
+class _MyCustomClipper extends CustomClipper<Path> {
+  final BuildContext _context;
+
+  _MyCustomClipper(this._context);
+
+  @override
+  Path getClip(Size size) {
+    final path = Path();
+    Size size = MediaQuery.of(_context).size;
+    path.lineTo(size.width, 0);
+    path.lineTo(size.width, size.height * 0.3);
+    path.lineTo(0, size.height * 0.6);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper oldClipper) {
+    return false;
   }
 }
