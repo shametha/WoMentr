@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "462688385079",
+    "project_id": "womentr-4abc5",
+    "storage_bucket": "womentr-4abc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462688385079:android:c2d96185a9d98fb6ffe7b2",
+        "android_client_info": {
+          "package_name": "com.example.womentr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462688385079-6uvjhgf2ptt47fm7c57ks1aavnth7rqk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.womentr",
+            "certificate_hash": "252b5627e00e5b221a4b2864ea11f9b2ee7f6c0a"
+          }
+        },
+        {
+          "client_id": "462688385079-00p6eku5fumvos6vd9d4pglnkpfgu809.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAxUqd7ysnVmPKGqM0OzStRKd-X78Du80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462688385079-00p6eku5fumvos6vd9d4pglnkpfgu809.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
