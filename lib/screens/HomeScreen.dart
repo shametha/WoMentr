@@ -2,7 +2,7 @@ import 'package:womentr/SizeConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-// import 'package:womentr/screens/Profile.dart';
+import 'package:womentr/screens/Profile.dart';
 // import 'package:womentr/screens/Question.dart';
 // import 'package:womentr/screens/QuestionCategory.dart';
 import '../../AppTheme.dart';
@@ -105,8 +105,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     Radius.circular(MySize.size8!)),
                                 child: GestureDetector(
                                   onTap: (){
-                              //       Navigator.push(context,MaterialPageRoute(
-                              //     builder: (context) =>ProfileScreen()));
+                                    Navigator.push(context,MaterialPageRoute(
+                                  builder: (context) =>ProfileScreen()));
                                  },
                                   child: Container(
                                     margin:
