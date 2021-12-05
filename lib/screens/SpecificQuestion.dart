@@ -19,7 +19,6 @@ class SpecificQuestionScreen extends StatefulWidget {
 class _SpecificQuestionScreenState extends State<SpecificQuestionScreen> {
   late ThemeData themeData;
   late CustomAppTheme customAppTheme;
-
   Widget build(BuildContext context) {
     themeData = Theme.of(context);
     MySize().init(context);

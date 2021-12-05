@@ -61,6 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           image: DecorationImage(
                               image: AssetImage(
                                   "./assets/images/WoMentr-Logo.png"),
+                                  
                               fit: BoxFit.fill),
                         ),
                       ),

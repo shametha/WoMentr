@@ -22,17 +22,16 @@ class _CategoryQuestionState extends State<CategoryQuestion> {
         debugShowCheckedModeBanner: false,
         home: SafeArea(
           child: Scaffold(
-              body: Stack(
-                children: [
-                  ClipPath(
-                    clipper: _MyCustomClipper(context),
-                    child: Container(
-                      alignment: Alignment.center,
-                      color: themeData.colorScheme.background.withOpacity(0.5),
-                    )),
-                  ListView(
-                          padding: EdgeInsets.all(24),
-                          children: <Widget>[
+              body: Stack(children: [
+            ClipPath(
+                clipper: _MyCustomClipper(context),
+                child: Container(
+                  alignment: Alignment.center,
+                  color: themeData.colorScheme.background.withOpacity(0.5),
+                )),
+            ListView(
+              padding: EdgeInsets.all(24),
+              children: <Widget>[
                 Container(
                   child: Text(
                     "Hey Shifu,",
@@ -80,9 +79,9 @@ class _CategoryQuestionState extends State<CategoryQuestion> {
                   date: "Aug 15, 2021",
                   headline: "I strongly doubt my instagram is hacked.",
                 ),
-                          ],
-                        ),
-                ])),
+              ],
+            ),
+          ])),
         ));
   }
 
@@ -93,8 +92,11 @@ class _CategoryQuestionState extends State<CategoryQuestion> {
   }) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-        MaterialPageRoute(builder: (context) => SpecificQuestionScreen(headline:headline,author:author,date:date)));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => SpecificQuestionScreen(
+                    headline: headline, author: author, date: date)));
       },
       child: Container(
         padding: EdgeInsets.all(20),

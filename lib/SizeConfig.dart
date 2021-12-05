@@ -202,18 +202,10 @@ class Spacing {
       width: width,
     );
   }
-
-
-
 }
 
-
-
 class Space{
-
   Space();
-
-
   static Widget height(double space){
     return SizedBox(height: MySize.getScaledSizeHeight(space),);
   }
@@ -221,7 +213,6 @@ class Space{
   static Widget width(double space){
     return SizedBox(width: MySize.getScaledSizeHeight(space),);
   }
-
 }
 
 enum ShapeTypeFor{

@@ -37,7 +37,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     backgroundColor: themeData.colorScheme.primary,
                     onPressed: () {
                       Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => QuestionCategoryScreen()));
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => QuestionCategoryScreen()));
                     },
                     label: Row(
                       children: [
@@ -104,10 +106,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 borderRadius: BorderRadius.all(
                                     Radius.circular(MySize.size8!)),
                                 child: GestureDetector(
-                                  onTap: (){
-                                    Navigator.push(context,MaterialPageRoute(
-                                  builder: (context) =>ProfileScreen()));
-                                 },
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                ProfileScreen()));
+                                  },
                                   child: Container(
                                     margin:
                                         EdgeInsets.only(bottom: MySize.size16!),
@@ -199,19 +204,21 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             InkWell(
-                              child: singleHelpWidget(
-                                  iconData: MdiIcons.humanGreeting,
-                                  title: "She Helps"),
-                                onTap:(){Navigator.push(context,MaterialPageRoute(builder: (context){
-                                  return CategoryQuestion(categoryInput: "She helps");
-                                }));}
-                            ),
-                            
+                                child: singleHelpWidget(
+                                    iconData: MdiIcons.humanGreeting,
+                                    title: "She Helps"),
+                                onTap: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return CategoryQuestion(
+                                        categoryInput: "She helps");
+                                  }));
+                                }),
                             singleHelpWidget(
-                                iconData: MdiIcons.laptop,
-                                title: "Business"),
+                                iconData: MdiIcons.laptop, title: "Business"),
                             singleHelpWidget(
-                                iconData: MdiIcons.babyCarriage, title: "MotherHood")
+                                iconData: MdiIcons.babyCarriage,
+                                title: "MotherHood")
                           ],
                         ),
                       ),
@@ -226,14 +233,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             singleHelpWidget(
                                 iconData: MdiIcons.cashMarker,
                                 title: "Finance"),
-                                singleHelpWidget(
+                            singleHelpWidget(
                                 iconData: MdiIcons.bookEducation,
                                 title: "Education"),
-                            
                           ],
                         ),
                       ),
-                       Container(
+                      Container(
                         margin: Spacing.top(24),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -242,8 +248,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 iconData: MdiIcons.meditation,
                                 title: "Fitness"),
                             singleHelpWidget(
-                                iconData: MdiIcons.shoeHeel,
-                                title: "Fashion"),
+                                iconData: MdiIcons.shoeHeel, title: "Fashion"),
                             singleHelpWidget(
                                 iconData: MdiIcons.food, title: "Food"),
                           ],
@@ -258,7 +263,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 iconData: MdiIcons.bagSuitcase,
                                 title: "Travel"),
                             singleHelpWidget(
-                                iconData: MdiIcons.faceProfileWoman, title: "Teen"),
+                                iconData: MdiIcons.faceProfileWoman,
+                                title: "Teen"),
                             singleHelpWidget(
                                 iconData: MdiIcons.music,
                                 title: "Music and Arts")
@@ -276,8 +282,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             singleHelpWidget(
                                 iconData: MdiIcons.dog, title: "Pets"),
                             singleHelpWidget(
-                                iconData: MdiIcons.heart,
-                                title: "Random")
+                                iconData: MdiIcons.heart, title: "Random")
                           ],
                         ),
                       ),
@@ -322,7 +327,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: 600),
             ),
           ),
-          
         ],
       ),
     );

@@ -16,7 +16,7 @@ Future<bool> checkUserExist(String docID) async {
   return res;
 }
 
-Future<bool> checkLoginCredential(String docID,String password) async {
+Future<bool> checkLoginCredential(String docID, String password) async {
   bool res = false;
   await FirebaseFirestore.instance
       .collection('Users')
@@ -25,13 +25,10 @@ Future<bool> checkLoginCredential(String docID,String password) async {
       .then((DocumentSnapshot documentSnapshot) {
     if (documentSnapshot.exists) {
       dynamic data = documentSnapshot.data();
-      if(data['password']== password)
-      res = true;
+      if (data['password'] == password) res = true;
     } else {
       res = false;
     }
   });
   return res;
 }
-
-
